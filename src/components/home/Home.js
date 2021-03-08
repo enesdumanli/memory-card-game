@@ -5,13 +5,11 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [name,setName] = useState("");
     return (
-        <div>
-            <h1>
-                Welcome to our Memory Game!
-            </h1>
+        <div className="container">
+            <h1> Welcome to our Memory Game! </h1>
             <input onChange={(e)=>setName(e.target.value)}
                 placeholder="Your Name"/>
-            <Link to={{pathname:"/game", name}}>Start the game !</Link>
+            <Link style={{ textDecoration: 'none',fontFamily:"monospace",fontSize:"24px"}} to={{pathname:"/game", name}}><br></br>Start the game !</Link>
         </div>
     )
 }

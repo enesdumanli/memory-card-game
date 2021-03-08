@@ -17,11 +17,9 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link style={{ marginRight:"50px" }} to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/game">Start Game</Link>
-            </li>
+            
           </ul>
         </nav>
 

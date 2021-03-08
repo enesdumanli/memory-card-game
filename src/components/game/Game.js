@@ -39,11 +39,14 @@ const Game = ({ location: { name } }) => {
     const history = useHistory();
     
     useEffect(()=>{
-        setShuffledCards(shuffle(cards))
+        setShuffledCards(shuffle(cards));
     },[])
 
     let checkCards = () =>{
-        if(flippedCards[0].name===flippedCards[1].name){
+        if(flippedCards[0].id===flippedCards[1].id){
+            shuffledCards.find(item => item.id === flippedCards[0].id).open = false;
+        }
+        else if(flippedCards[0].name===flippedCards[1].name){
             shuffledCards.find(item => item.id === flippedCards[0].id).isCompleted = true;
             shuffledCards.find(item => item.id === flippedCards[1].id).isCompleted = true;
             setMatchedCards([...matchedCards, flippedCards[0].id, flippedCards[1].id]);
@@ -52,7 +55,6 @@ const Game = ({ location: { name } }) => {
                 history.push({
                     pathname:'/result',
                     score:score,
-                    matchedCards
                 })
             }
         }    
@@ -64,13 +66,11 @@ const Game = ({ location: { name } }) => {
     }
 
     let onClickHandler = (card,index) => {
+        
         setScore(score+0.5)
-
         let flippedCardsShallowCopy = flippedCards;
-
-        shuffledCards[index].open = true;
+        shuffledCards[index].open=true
         flippedCardsShallowCopy.push(card);
-
         setFlippedCards(flippedCardsShallowCopy)
 
         if(flippedCards.length===2){
@@ -78,12 +78,11 @@ const Game = ({ location: { name } }) => {
                 checkCards()},500)
             }
     }        
-
+    const varName = (name !== "" ? name : "secret visitor");
     return (
-    <>
-        <h2>Selam {}</h2>
+    <>  
+        <h2>Nice to see you {varName}!</h2>
         <div className="card-container">
-            {name}
             {shuffledCards.map((card,index)=>
                 <Card item={card}
                     key={index}

@@ -1,3 +1,10 @@
-body{
+div{
     text-align: center;
+}
+  
+  
+    
+body{
+    background: rgb(17,98,110);
+    background: linear-gradient(90deg, rgba(17,98,110,1) 5%, rgba(77,205,74,0.8435749299719888) 44%, rgba(54,135,56,1) 93%);
 }
