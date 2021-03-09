@@ -46,6 +46,20 @@ const Game = ({ location: { name } }) => {
         if(flippedCards[0].id===flippedCards[1].id){
             shuffledCards.find(item => item.id === flippedCards[0].id).open = false;
         }
+        else if(shuffledCards.find(item => item.id === flippedCards[0].id).isCompleted === true || shuffledCards.find(item => item.id === flippedCards[1].id).isCompleted === true){
+            if(shuffledCards.find(item => item.id === flippedCards[0].id).isCompleted === true ){
+                shuffledCards.find(item => item.id === flippedCards[0].id).open = true;
+                shuffledCards.find(item => item.id === flippedCards[1].id).open = false;
+            }
+            if(shuffledCards.find(item => item.id === flippedCards[1].id).isCompleted === true){
+                shuffledCards.find(item => item.id === flippedCards[1].id).open = true;
+                shuffledCards.find(item => item.id === flippedCards[0].id).open = false;
+            }
+            if(shuffledCards.find(item => item.id === flippedCards[0].id).isCompleted === true && shuffledCards.find(item => item.id === flippedCards[1].id).isCompleted === true){
+                shuffledCards.find(item => item.id === flippedCards[1].id).open = true;
+                shuffledCards.find(item => item.id === flippedCards[0].id).open = true;
+            }
+        }
         else if(flippedCards[0].name===flippedCards[1].name){
             shuffledCards.find(item => item.id === flippedCards[0].id).isCompleted = true;
             shuffledCards.find(item => item.id === flippedCards[1].id).isCompleted = true;
@@ -71,7 +85,7 @@ const Game = ({ location: { name } }) => {
         let flippedCardsShallowCopy = flippedCards;
         shuffledCards[index].open=true
         flippedCardsShallowCopy.push(card);
-        setFlippedCards(flippedCardsShallowCopy)
+        setFlippedCards(flippedCardsShallowCopy)// spread operator not working quite well here thats why we create copy
 
         if(flippedCards.length===2){
             setTimeout(()=>{
@@ -81,7 +95,7 @@ const Game = ({ location: { name } }) => {
     const varName = (name !== "" ? name : "secret visitor");
     return (
     <>  
-        <h2>Nice to see you {varName}!</h2>
+        <h2 style={{fontFamily:"sans-serif"}}>Nice to see you {varName}!</h2>
         <div className="card-container">
             {shuffledCards.map((card,index)=>
                 <Card item={card}

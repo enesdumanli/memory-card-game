@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div className="container">
             <h1> Welcome to our Memory Game! </h1>
-            <input onChange={(e)=>setName(e.target.value)}
+            <input style={{marginBottom:"20px"}}onChange={(e)=>setName(e.target.value)}
                 placeholder="Your Name"/>
             <Link style={{ textDecoration: 'none',fontFamily:"monospace",fontSize:"24px"}} to={{pathname:"/game", name}}><br></br>Start the game !</Link>
         </div>
