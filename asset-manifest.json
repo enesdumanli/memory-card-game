@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.04f41531.chunk.css",
+    "main.js": "/memory-card-game/static/js/main.c90fa0d6.chunk.js",
+    "main.js.map": "/memory-card-game/static/js/main.c90fa0d6.chunk.js.map",
+    "runtime-main.js": "/memory-card-game/static/js/runtime-main.c36ef0b2.js",
+    "runtime-main.js.map": "/memory-card-game/static/js/runtime-main.c36ef0b2.js.map",
+    "static/js/2.51992007.chunk.js": "/memory-card-game/static/js/2.51992007.chunk.js",
+    "static/js/2.51992007.chunk.js.map": "/memory-card-game/static/js/2.51992007.chunk.js.map",
+    "static/js/3.66788ecb.chunk.js": "/memory-card-game/static/js/3.66788ecb.chunk.js",
+    "static/js/3.66788ecb.chunk.js.map": "/memory-card-game/static/js/3.66788ecb.chunk.js.map",
+    "index.html": "/memory-card-game/index.html",
+    "static/css/main.04f41531.chunk.css.map": "/memory-card-game/static/css/main.04f41531.chunk.css.map",
+    "static/js/2.51992007.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.51992007.chunk.js.LICENSE.txt",
+    "static/media/approve.0fbe8fba.jpg": "/memory-card-game/static/media/approve.0fbe8fba.jpg",
+    "static/media/arka.ea7e6e78.png": "/memory-card-game/static/media/arka.ea7e6e78.png",
+    "static/media/disapprove.7a04d95b.jpg": "/memory-card-game/static/media/disapprove.7a04d95b.jpg",
+    "static/media/dunya.41bcdbfa.png": "/memory-card-game/static/media/dunya.41bcdbfa.png",
+    "static/media/geridonusum.b900c5da.png": "/memory-card-game/static/media/geridonusum.b900c5da.png",
+    "static/media/kadin1.6415b4ea.png": "/memory-card-game/static/media/kadin1.6415b4ea.png",
+    "static/media/kadin2.f7270544.png": "/memory-card-game/static/media/kadin2.f7270544.png",
+    "static/media/pervane.deb34d89.png": "/memory-card-game/static/media/pervane.deb34d89.png",
+    "static/media/sise.3eb36da0.png": "/memory-card-game/static/media/sise.3eb36da0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c36ef0b2.js",
+    "static/js/2.51992007.chunk.js",
+    "static/css/main.04f41531.chunk.css",
+    "static/js/main.c90fa0d6.chunk.js"
+  ]
+}
